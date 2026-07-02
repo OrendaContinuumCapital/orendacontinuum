@@ -797,3 +797,80 @@ h1{
 .contact-form button:hover{
   background:#08384c;
 }
+/* ===========================================
+   Investor Carousel
+=========================================== */
+
+.investor-section {
+  margin: 3rem 0;
+}
+
+.investor-carousel {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.investor-card {
+  flex: 0 0 210px;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.investor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,.10);
+}
+
+.investor-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: .85rem;
+}
+
+.investor-card strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  margin-bottom: .25rem;
+}
+
+.investor-card span {
+  display: block;
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.investor-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.investor-carousel::-webkit-scrollbar-track {
+  background: var(--soft);
+  border-radius: 999px;
+}
+
+.investor-carousel::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .investor-card {
+    flex-basis: 170px;
+  }
+}
