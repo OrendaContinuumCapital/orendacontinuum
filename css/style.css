@@ -874,3 +874,64 @@ h1{
     flex-basis: 170px;
   }
 }
+/* ===========================================
+   FAQ PAGE
+=========================================== */
+
+.faq-list{
+    margin-top:3rem;
+}
+
+.faq-list details{
+    border-top:1px solid var(--line);
+    padding:1.2rem 0;
+}
+
+.faq-list details:last-child{
+    border-bottom:1px solid var(--line);
+}
+
+.faq-list summary{
+    list-style:none;
+    cursor:pointer;
+    color:var(--blue);
+    font-size:1.15rem;
+    font-weight:600;
+    line-height:1.5;
+    transition:opacity .2s ease;
+}
+
+.faq-list summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-list summary::after{
+    content:"+";
+    float:right;
+    color:var(--blue);
+    font-size:1.6rem;
+    font-weight:300;
+    line-height:1;
+    transition:transform .2s ease;
+}
+
+.faq-list details[open] summary::after{
+    content:"–";
+}
+
+.faq-list summary:hover{
+    opacity:.75;
+}
+
+.faq-list p{
+    margin:1rem 0 0;
+    max-width:70ch;
+}
+
+.faq-list a{
+    color:var(--blue);
+}
+
+.faq-list details + details{
+    margin-top:.2rem;
+}
