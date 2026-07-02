@@ -935,3 +935,80 @@ h1{
 .faq-list details + details{
     margin-top:.2rem;
 }
+/* ===========================================
+   Responsive Navigation
+=========================================== */
+
+.nav-toggle{
+    display:none;
+}
+
+.menu-button{
+    display:none;
+    font-size:1.8rem;
+    cursor:pointer;
+    color:var(--blue);
+}
+
+.lang-desktop{
+    margin-left:1rem;
+    font-weight:600;
+}
+
+.lang-mobile{
+    display:none;
+}
+
+@media (max-width:900px){
+
+    .menu-button{
+        display:block;
+    }
+
+    .lang-desktop{
+        display:none;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+
+        background:white;
+
+        flex-direction:column;
+
+        padding:1.5rem;
+
+        gap:1rem;
+
+        border-top:1px solid var(--line);
+
+        box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+        z-index:1000;
+    }
+
+    .lang-mobile{
+        display:block;
+        margin-top:.5rem;
+        font-weight:600;
+    }
+
+    .nav-toggle:checked + .menu-button + .nav-links{
+
+        display:flex;
+
+    }
+
+    .nav{
+
+        position:relative;
+
+    }
+
+}
