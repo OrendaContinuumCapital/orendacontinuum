@@ -747,3 +747,53 @@ h1{
     font-style:italic;
     color:#173f5f;
 }
+.contact-form-block{
+  margin-top:4rem;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  max-width:620px;
+}
+
+.contact-form label{
+  font-family:var(--sans);
+  font-size:.8rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:.9rem 1rem;
+  border:1px solid var(--line);
+  background:#fff;
+  font-family:var(--serif);
+  font-size:1.05rem;
+}
+
+.contact-form textarea{
+  resize:vertical;
+}
+
+.contact-form button{
+  margin-top:1rem;
+  width:fit-content;
+  padding:.9rem 1.4rem;
+  border:1px solid var(--blue);
+  background:var(--blue);
+  color:white;
+  font-family:var(--sans);
+  font-size:.8rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  background:#08384c;
+}
