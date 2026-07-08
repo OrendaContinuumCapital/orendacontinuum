@@ -149,7 +149,7 @@ img{
 
 .hero-letter{
 
-    padding:70px 26px 90px;
+    padding:10px 26px 90px;
 
     background:var(--soft);
 
@@ -170,6 +170,11 @@ img{
     align-items:start;
 
 }
+.hero-letter-image{
+
+    width:350px;
+
+}
 /* ---------- About Page ---------- */
 
 .about-hero .hero-letter-copy{
@@ -177,7 +182,7 @@ img{
 }
 
 .about-hero .hero-letter-image{
-    padding-top:30px;
+    padding-top:20px;
 }
 
 .about-hero .hero-letter-image img{
@@ -237,7 +242,7 @@ h1{
 
     max-width:520px;
 
-    font-size:60px;
+    font-size:50px;
 
     font-weight:400;
 
@@ -246,7 +251,11 @@ h1{
     letter-spacing:-.045em;
 
 }
-
+.page-title{
+    font-size:35px;
+    line-height:1.08;
+    max-width:620px;
+}
 .intro{
 
     max-width:500px;
@@ -295,7 +304,7 @@ h1{
 
 .letter-section{
 
-    padding:90px 24px;
+    padding:30px 24px;
 
 }
 
@@ -517,7 +526,8 @@ h1{
 
     color: var(--blue);
 
-    font-weight: 550;
+    font-weight: 530;
+    font-style:italic;
 
 }
 

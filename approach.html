@@ -219,5 +219,12 @@ Every business is different, but every conversation starts the same way.
   </div>
 </footer>
 
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
