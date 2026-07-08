@@ -24,6 +24,25 @@
 <meta name="twitter:image" content="https://orendacontinuum.ca/images/og-rym.jpg">
 
 <link rel="canonical" href="https://orendacontinuum.ca/contact.html">
+<link rel="alternate" hreflang="en" href="https://orendacontinuum.ca/contact.html">
+<link rel="alternate" hreflang="fr" href="https://orendacontinuum.ca/fr/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://orendacontinuum.ca/contact.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://orendacontinuum.ca/contact.html#contact",
+  "url": "https://orendacontinuum.ca/contact.html",
+  "name": "Contact",
+  "description": "Contact Rym Leulmi to begin a confidential conversation about business succession.",
+  "inLanguage": "en-CA",
+  "publisher": {
+    "@id": "https://orendacontinuum.ca/#organization"
+  }
+}
+</script>
+
 </head>
 
 <body>
@@ -149,10 +168,21 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <div>© 2026 Rym Leulmi / Orenda Continuum Capital</div>
-    <div><a href="mailto:rym@orendacontinuum.ca">rym@orendacontinuum.ca</a></div>
+  <div>© <span id="copyright-year"></span> Rym Leulmi / Orenda Continuum Capital</div>
+    <div><a href="contact.html">Contact</a></div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
   document.addEventListener('contextmenu', function(e) {

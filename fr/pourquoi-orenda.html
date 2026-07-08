@@ -23,6 +23,30 @@
 <meta name="twitter:description" content="Avant de chercher une entreprise, j'ai bâti la certitude derrière la recherche en réunissant des investisseurs expérimentés à long terme qui ont cru en moi d'abord.">
 <meta name="twitter:image" content="https://orendacontinuum.ca/images/og-rym.jpg">
 
+<!-- fr/pourquoi-orenda.html -->
+<link rel="canonical" href="https://orendacontinuum.ca/fr/pourquoi-orenda.html">
+<link rel="alternate" hreflang="fr" href="https://orendacontinuum.ca/fr/pourquoi-orenda.html">
+<link rel="alternate" hreflang="en" href="https://orendacontinuum.ca/why-orenda.html">
+<link rel="alternate" hreflang="x-default" href="https://orendacontinuum.ca/why-orenda.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://orendacontinuum.ca/fr/pourquoi-orenda.html#webpage",
+  "url": "https://orendacontinuum.ca/fr/pourquoi-orenda.html",
+  "name": "Pourquoi Orenda",
+  "description": "Découvrez pourquoi des propriétaires d'entreprise choisissent Orenda Continuum Capital pour assurer la continuité de leur entreprise.",
+  "inLanguage": "fr-CA",
+  "isPartOf": {
+    "@id": "https://orendacontinuum.ca/#website"
+  },
+  "publisher": {
+    "@id": "https://orendacontinuum.ca/#organization"
+  }
+}
+</script>
+
 </head>
 
 <body>
@@ -43,10 +67,10 @@
     </label>
 
     <div class="nav-links">
-      <a href="about.html">À propos</a>
-      <a href="approach.html">Mon approche</a>
-      <a href="right-company.html">La bonne entreprise</a>
-      <a href="why-orenda.html">Pourquoi Orenda</a>
+      <a href="apropos.html">À propos</a>
+      <a href="approche.html">Mon approche</a>
+      <a href="la-bonne-entreprise.html">La bonne entreprise</a>
+      <a href="pourquoi-orenda.html">Pourquoi Orenda</a>
       <a href="faq.html">Questions</a>
       <a href="contact.html">Contact</a>
       <a class="lang-mobile" href="../why-orenda.html">EN</a>
@@ -274,10 +298,21 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <div>© 2026 Rym Leulmi / Orenda Continuum Capital</div>
-    <div><a href="mailto:rym@orendacontinuum.ca">rym@orendacontinuum.ca</a></div>
+  <div>© <span id="copyright-year"></span> Rym Leulmi / Orenda Continuum Capital</div>
+    <div><a href="contact.html">Contact</a></div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
   document.addEventListener('contextmenu', function(e) {

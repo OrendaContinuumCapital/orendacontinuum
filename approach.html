@@ -24,6 +24,27 @@
 <meta name="twitter:image" content="https://orendacontinuum.ca/images/og-rym.jpg">
 
 <link rel="canonical" href="https://orendacontinuum.ca/approach.html">
+<link rel="alternate" hreflang="en" href="https://orendacontinuum.ca/approach.html">
+<link rel="alternate" hreflang="fr" href="https://orendacontinuum.ca/fr/approche.html">
+<link rel="alternate" hreflang="x-default" href="https://orendacontinuum.ca/approach.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://orendacontinuum.ca/approach.html#webpage",
+  "url": "https://orendacontinuum.ca/approach.html",
+  "name": "My Approach",
+  "description": "Learn how Rym Leulmi approaches business succession, leadership transition, and long-term stewardship through Orenda Continuum Capital.",
+  "inLanguage": "en-CA",
+  "isPartOf": {
+    "@id": "https://orendacontinuum.ca/#website"
+  },
+  "publisher": {
+    "@id": "https://orendacontinuum.ca/#organization"
+  }
+}
+</script>
 </head>
 
 <body>
@@ -216,11 +237,21 @@ Every business is different, but every conversation starts the same way.
 
 <footer class="footer">
   <div class="footer-inner">
-    <div>© 2026 Rym Leulmi / Orenda Continuum Capital</div>
-    <div><a href="mailto:rym@orendacontinuum.ca">rym@orendacontinuum.ca</a></div>
+  <div>© <span id="copyright-year"></span> Rym Leulmi / Orenda Continuum Capital</div>
+    <div><a href="contact.html">Contact</a></div>
   </div>
 </footer>
 
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 <script>
   document.addEventListener('contextmenu', function(e) {
     if (e.target.tagName === 'IMG') {

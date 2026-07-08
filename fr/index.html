@@ -25,6 +25,9 @@
 
 <!-- fr/index.html -->
 <link rel="canonical" href="https://orendacontinuum.ca/fr/">
+<link rel="alternate" hreflang="fr" href="https://orendacontinuum.ca/fr/">
+<link rel="alternate" hreflang="en" href="https://orendacontinuum.ca/">
+<link rel="alternate" hreflang="x-default" href="https://orendacontinuum.ca/">
 
 <script type="application/ld+json">
 {
@@ -118,8 +121,8 @@
     </label>
 
     <div class="nav-links">
-      <a href="about.html">À propos</a>
-      <a href="approach.html">Mon approche</a>
+      <a href="apropos.html">À propos</a>
+      <a href="approche.html">Mon approche</a>
       <a href="la-bonne-entreprise.html">La bonne entreprise</a>
       <a href="pourquoi-orenda.html">Pourquoi Orenda</a>
       <a href="faq.html">Questions</a>
@@ -221,10 +224,21 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <div>© 2026 Rym Leulmi / Orenda Continuum Capital</div>
-    <div><a href="mailto:rym@orendacontinuum.ca">rym@orendacontinuum.ca</a></div>
+  <div>© <span id="copyright-year"></span> Rym Leulmi / Orenda Continuum Capital</div>
+    <div><a href="contact.html">Contact</a></div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
   document.addEventListener('contextmenu', function(e) {

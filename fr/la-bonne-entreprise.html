@@ -22,6 +22,31 @@
 <meta name="twitter:title" content="Rym Leulmi | Succession d'entreprise, en toute continuité">
 <meta name="twitter:description" content="Découvrez les types d'entreprises canadiennes que je souhaite posséder et diriger à long terme — et tout aussi important, celles que je ne poursuivrai pas.">
 <meta name="twitter:image" content="https://orendacontinuum.ca/images/og-rym.jpg">
+
+<!-- fr/la-bonne-entreprise.html -->
+<link rel="canonical" href="https://orendacontinuum.ca/fr/la-bonne-entreprise.html">
+<link rel="alternate" hreflang="fr" href="https://orendacontinuum.ca/fr/la-bonne-entreprise.html">
+<link rel="alternate" hreflang="en" href="https://orendacontinuum.ca/right-company.html">
+<link rel="alternate" hreflang="x-default" href="https://orendacontinuum.ca/right-company.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://orendacontinuum.ca/fr/la-bonne-entreprise.html#webpage",
+  "url": "https://orendacontinuum.ca/fr/la-bonne-entreprise.html",
+  "name": "La bonne entreprise",
+  "description": "Découvrez le type d'entreprise que recherche Orenda Continuum Capital pour une acquisition à long terme.",
+  "inLanguage": "fr-CA",
+  "isPartOf": {
+    "@id": "https://orendacontinuum.ca/#website"
+  },
+  "publisher": {
+    "@id": "https://orendacontinuum.ca/#organization"
+  }
+}
+</script>
+
 </head>
 
 <body>
@@ -42,8 +67,8 @@
     </label>
 
     <div class="nav-links">
-      <a href="about.html">À propos</a>
-      <a href="approach.html">Mon approche</a>
+      <a href="apropos.html">À propos</a>
+      <a href="approche.html">Mon approche</a>
       <a href="la-bonne-entreprise.html">La bonne entreprise</a>
       <a href="pourquoi-orenda.html">Pourquoi Orenda</a>
       <a href="faq.html">Questions</a>
@@ -156,10 +181,21 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <div>© 2026 Rym Leulmi / Orenda Continuum Capital</div>
-    <div><a href="mailto:rym@orendacontinuum.ca">rym@orendacontinuum.ca</a></div>
+  <div>© <span id="copyright-year"></span> Rym Leulmi / Orenda Continuum Capital</div>
+    <div><a href="contact.html">Contact</a></div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
   document.addEventListener('contextmenu', function(e) {

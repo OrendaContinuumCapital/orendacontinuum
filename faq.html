@@ -26,6 +26,103 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <link rel="canonical" href="https://orendacontinuum.ca/faq.html">
+  <link rel="alternate" hreflang="en" href="https://orendacontinuum.ca/faq.html">
+<link rel="alternate" hreflang="fr" href="https://orendacontinuum.ca/fr/faq.html">
+<link rel="alternate" hreflang="x-default" href="https://orendacontinuum.ca/faq.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://orendacontinuum.ca/faq.html#faq",
+  "url": "https://orendacontinuum.ca/faq.html",
+  "name": "Questions Business Owners Often Ask",
+  "inLanguage": "en-CA",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens after our first conversation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first conversation is simply an opportunity to get to know each other. We will discuss your business, your goals, your timeline, and whether Orenda Continuum Capital could be the right fit. There is no commitment and no obligation to move forward. If we both feel there may be a fit, we can continue the conversation at whatever pace feels comfortable to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is our conversation confidential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. I understand that exploring succession is a significant decision and often a private one. Every conversation is treated with complete confidentiality, and nothing is shared without your knowledge or consent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my employees keep their jobs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The transition is about replacing the owner, not replacing the people who helped build the company. In fact, I hope your employees choose to stay. They hold valuable knowledge, trusted relationships, and the culture that made the business successful in the first place. I believe people are the heart of every exceptional company."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a transition take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every transition is different. Some owners are ready to retire quickly. Others prefer to stay involved for several months to transfer knowledge and introduce the new owner to employees, customers, and suppliers. Typically, transitions last between three and twelve months, but the pace is determined together based on what is best for you and the business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I speak with you if I am not ready to sell?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do not have to be ready. Many owners begin thinking about succession years before making a decision. Our first conversation is simply an opportunity to explore your options, ask questions, and determine whether we may be a good fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to decide now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at all. Many of the business owners I meet are simply beginning to think about succession. Some continue leading their business for several years before deciding whether, when, or how to transition. Our first conversations are about understanding your goals and exploring your options, not making a decision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a search fund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A search fund is a model where an entrepreneur is backed by a group of experienced investors to acquire and personally lead one company for the long term. Those investors provide more than capital. Many have built, acquired, led, or continue to lead businesses themselves. They serve as advisors and mentors, bringing decades of practical experience as CEOs, operators, entrepreneurs, and investors. Their role is not to run the company. It is to challenge my thinking, share their experience, and support me throughout my journey as CEO."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a search fund different from private equity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every buyer is different, and many private equity firms are excellent owners. The difference is that Orenda Continuum Capital was created to acquire one exceptional company and lead it for the long term. I am not building a portfolio or preparing a future exit. My goal is to become the next steward of the business, preserving what already makes it successful while continuing to build on its foundation. Because I will personally become the CEO, my success depends on earning the trust of your employees, your customers, and you. That makes the transition just as important as the transaction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have information I can share with my network?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you know a business owner who may be thinking about succession, you can download my Buyer Profile in English or French and share it with them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I refer a business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you know a business owner who may be considering succession, I would be grateful for the introduction. You can either introduce us directly by email or complete the referral form below."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
@@ -226,10 +323,21 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <div>© 2026 Rym Leulmi / Orenda Continuum Capital</div>
-    <div><a href="mailto:rym@orendacontinuum.ca">rym@orendacontinuum.ca</a></div>
+  <div>© <span id="copyright-year"></span> Rym Leulmi / Orenda Continuum Capital</div>
+    <div><a href="contact.html">Contact</a></div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 
 <script>
   document.addEventListener('contextmenu', function(e) {
