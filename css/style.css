@@ -1022,3 +1022,7 @@ h1{
     }
 
 }
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
