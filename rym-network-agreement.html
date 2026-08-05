@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome to Rym's Network</title>
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+
+  :root{
+    --paper: #FAF6ED;
+    --paper-warm: #F3EBDA;
+    --ink: #23301F;
+    --ink-soft: #55604F;
+    --ink-faint: #8A8F7C;
+    --accent: #7C4A2D;      /* warm walnut - handshake tone */
+    --accent-line: #B4813C; /* muted brass */
+    --wash: #EFE3CC;
+    --wash-line: #D9C6A0;
+    --hairline: #D8CBAE;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html, body{
+    width: 8.5in;
+    height: 11in;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Liberation Sans', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page{
+    width: 8.5in;
+    height: 11in;
+    padding: 0.40in 0.62in 0.30in 0.62in;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(1100px 500px at 92% -10%, rgba(180,129,60,0.10), transparent 60%),
+      var(--paper);
+  }
+
+  /* ---------- signature motif: a stitched thread rule ---------- */
+  .stitch{
+    width: 100%;
+    height: 10px;
+    display: block;
+  }
+  .stitch svg{ width:100%; height:100%; display:block; }
+
+  /* ---------- header ---------- */
+  .header{
+    display: flex;
+    align-items: center;
+    gap: 0.34in;
+    padding-bottom: 0.14in;
+  }
+
+  .portrait-wrap{
+    width: 1.12in;
+    height: 1.12in;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    padding: 5px;
+    background: conic-gradient(from 210deg, var(--accent-line), var(--accent), var(--accent-line));
+    box-shadow: 0 4px 14px rgba(35,48,31,0.18);
+  }
+  .portrait{
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--paper);
+    background: #ddd;
+  }
+  .portrait img{ width:100%; height:100%; object-fit: cover; object-position: 50% 22%; }
+
+  .heading-block{ flex: 1 1 auto; }
+
+  .eyebrow-top{
+    font-family: 'Poppins', 'Liberation Sans', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3px;
+  }
+
+  h1{
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    font-size: 25pt;
+    line-height: 1.04;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+  }
+
+  h1 .amp{ color: var(--accent); font-style: italic; font-weight: 500; }
+
+  .subtitle{
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 11pt;
+    color: var(--ink-soft);
+    margin-top: 3px;
+  }
+
+  /* ---------- intro line ---------- */
+  .intro{
+    font-family: 'Lora', Georgia, serif;
+    font-size: 9.6pt;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    padding: 0.08in 0 0.10in 0;
+    max-width: 7.1in;
+  }
+  .intro strong{ color: var(--ink); font-weight: 600; }
+
+  /* ---------- grid of sections ---------- */
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.40in;
+    row-gap: 0.10in;
+    padding-top: 0.06in;
+  }
+
+  .card{
+    padding-top: 2px;
+  }
+  .card.wide{
+    grid-column: 1 / -1;
+  }
+  .card.wide p{ max-width: 6.9in; }
+
+  .tag{
+    display: inline-block;
+    font-family: 'Poppins', 'Liberation Sans', sans-serif;
+    font-size: 7.4pt;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1.4px solid var(--wash-line);
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+  }
+
+  h2{
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    font-size: 11.4pt;
+    color: var(--ink);
+    margin-bottom: 3px;
+    line-height: 1.1;
+  }
+
+  p{
+    font-size: 9pt;
+    line-height: 1.32;
+    color: var(--ink-soft);
+  }
+
+  p + p{ margin-top: 3px; }
+
+  /* ---------- how it works: mini flow (this one is a real sequence) ---------- */
+  .flow{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 1px;
+  }
+  .flow-step{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .flow-num{
+    flex: 0 0 auto;
+    width: 15px; height: 15px;
+    border-radius: 50%;
+    background: var(--wash);
+    border: 1px solid var(--wash-line);
+    color: var(--accent);
+    font-family: 'Poppins', sans-serif;
+    font-size: 7.6pt;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+  .flow-step p{ font-size: 9.6pt; line-height: 1.28; }
+
+  /* ---------- closing band ---------- */
+  .closing{
+    margin-top: 0.08in;
+    background: var(--wash);
+    border-radius: 3px;
+    padding: 0.11in 0.24in;
+    position: relative;
+  }
+  .closing::before{
+    content: "";
+    position: absolute;
+    left: 0; top: 0.14in; bottom: 0.14in;
+    width: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+  .closing h2{ font-size: 11.6pt; }
+  .closing p{ color: var(--ink); font-size: 8.8pt; }
+
+  /* ---------- footer / signature block ---------- */
+  .footer{
+    margin-top: 0.12in;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.3in;
+  }
+
+  .sig-name{
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 13pt;
+    color: var(--ink);
+  }
+  .sig-role{
+    font-size: 9pt;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 1px;
+    letter-spacing: 0.2px;
+  }
+  .sig-tag{
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    font-size: 8.8pt;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  .sig-contact{
+    text-align: right;
+    font-size: 8.2pt;
+    color: var(--ink-soft);
+    line-height: 1.42;
+  }
+  .sig-contact .company{
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 9.2pt;
+  }
+  .sig-contact .dot{ color: var(--accent-line); margin: 0 4px; }
+
+  .foot-note{
+    text-align: center;
+    font-size: 7.2pt;
+    color: var(--ink-faint);
+    margin-top: 0.09in;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="portrait-wrap">
+      <div class="portrait"><img src="images/rym-leulmi-homepage-portrait.jpg" alt="Rym Leulmi"></div>
+    </div>
+    <div class="heading-block">
+      <div class="eyebrow-top">Network Participation Agreement</div>
+      <h1>Welcome to Rym&rsquo;s Network</h1>
+      <div class="subtitle">A handshake, put into words.</div>
+    </div>
+  </div>
+
+  <div class="stitch">
+    <svg viewBox="0 0 800 10" preserveAspectRatio="none">
+      <line x1="0" y1="5" x2="800" y2="5" stroke="#D8CBAE" stroke-width="1.4" stroke-dasharray="1,7" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <p class="intro">I&rsquo;m personally searching for one exceptional Canadian business to acquire and lead &mdash; not on behalf of a firm, but as its next owner. <strong>Rym&rsquo;s Network</strong> exists for one reason: to help me meet business owners who may be starting to think about retirement or succession. If that sounds like something you&rsquo;d like to be part of, this page explains how it works.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="tag">The Mission</div>
+      <h2>Welcome</h2>
+      <p>Every great Canadian business deserves a thoughtful next chapter. I started this network to meet owners who may be considering succession, so I can find the one business I&rsquo;m meant to carry forward. You&rsquo;re part of that search &mdash; simply by being someone I trust.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">The Simple Version</div>
+      <h2>How the Network Works</h2>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-num">1</div><p>You know a business owner who may be thinking about succession.</p></div>
+        <div class="flow-step"><div class="flow-num">2</div><p>You introduce us.</p></div>
+        <div class="flow-step"><div class="flow-num">3</div><p>If I acquire that business, I pay you a success fee on closing day.</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="tag">Fair Play</div>
+      <h2>First Introduction Rule</h2>
+      <p>If more than one person introduces me to the same owner, the success fee belongs to whoever introduced them first. I keep a simple record of email introductions, and that record determines who was first.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Good To Know</div>
+      <h2>What Counts as an Introduction</h2>
+      <p>A introduction means the owner has agreed to be introduced and we both receive that introduction directly; typically by email. Mentioning my name in passing doesn&rsquo;t count; I need to actually be connected.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Trust, Both Ways</div>
+      <h2>Confidentiality</h2>
+      <p>I&rsquo;ll keep your personal information confidential. In turn, I ask that you respect the privacy of any business owner you introduce me to. Succession is a sensitive, personal decision for them.</p>
+    </div>
+
+    <div class="card">
+      <div class="tag">No Pressure</div>
+      <h2>No Obligation</h2>
+      <p>Joining is free, and nobody owes anybody anything. You&rsquo;re never required to make an introduction, I&rsquo;m never required to pursue any particular acquisition, and no business owner is ever obligated to selltalk to me.</p>
+    </div>
+
+    <div class="card wide">
+      <div class="tag">The Reward</div>
+      <h2>Success Fee</h2>
+      <p>If your introduction directly leads to a completed acquisition, I&rsquo;ll pay you the agreed fixed success fee on the day the deal closes. The principle is: good introductions are rewarded.</p>
+    </div>
+
+  </div>
+
+  <div class="closing">
+    <div class="tag" style="border-color: var(--accent-line);">Thank You</div>
+    <h2>One Last Thing</h2>
+    <p>Thank you for being here. You never know which conversation leads to the right introduction. And for one entrepreneur, that introduction could be the start of finding the right successor. I&rsquo;m grateful to have you in my corner.</p>
+  </div>
+
+  <div class="stitch" style="margin-top: 0.16in;">
+    <svg viewBox="0 0 800 10" preserveAspectRatio="none">
+      <line x1="0" y1="5" x2="800" y2="5" stroke="#D8CBAE" stroke-width="1.4" stroke-dasharray="1,7" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+ <div class="footer">
+  <div>
+    <div class="sig-name">Rym Leulmi <span style="font-style:normal; font-weight:400; font-size:11pt; color:var(--ink-soft);">Eng, MBA</span></div>
+    <div class="sig-role">Orenda Continuum Capital</div>
+    <div class="sig-tag">“The right successor for a great Canadian business.”</div>
+  </div>
+  <div class="sig-contact">
+    <div class="company">Orenda Continuum Capital LLC</div>
+    <div>514&#8209;207&#8209;4388 <span class="dot">&middot;</span> <a href="https://www.linkedin.com/in/rymleulmi/"
+   style="color:#23301F; text-decoration:none;">
+    LinkedIn
+</a></div>
+    <div><a class="quiet-link" href="https://orendacontinuum.ca/">orendacontinuum.ca/</a></div>
+    <div>Let&rsquo;s connect here: <a class="quiet-link" href="https://calendly.com/rym-leulmi/">Calendly</a></div>
+  </div>
+</div>
+
+  <div class="foot-note">This is not an M&amp;A advisory, brokerage, or consulting service, it&rsquo;s a personal network of people who believe in one mission.</div>
+
+</div>
+</body>
+</html>

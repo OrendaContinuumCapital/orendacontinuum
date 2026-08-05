@@ -1026,3 +1026,15 @@ h1{
   display: flex;
   gap: 1.5rem;
 }
+  /* ---------- Footer links (this page only) ---------- */
+  .footer .sig-contact a,
+  .footer .sig-contact a:visited{
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .footer .sig-contact a:hover,
+  .footer .sig-contact a:focus{
+    color: var(--accent);
+    text-decoration: underline;
+  }
